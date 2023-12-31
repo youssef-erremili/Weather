@@ -65,29 +65,25 @@ function weatherFunction(weatherinfo) {
     cityTemp.innerHTML = Math.round(weatherinfo.main.temp)
     cityWind.innerHTML = weatherinfo.wind.speed
     cityHumidity.innerHTML = weatherinfo.main.humidity
+    weatherCondition.innerHTML = weatherinfo.weather[0].main
     weatherDescription.innerHTML = weatherinfo.weather[0].description
     if (weatherinfo.weather[0].main === "Clear") {
         weatherCondition.innerHTML = weatherinfo.weather[0].main
         weatherImg.setAttribute("src", "img/clear.png")
     }
     else if (weatherinfo.weather[0].main === "Clouds") {
-        weatherCondition.innerHTML = weatherinfo.weather[0].main
         weatherImg.setAttribute("src", "img/clouds.png")
     }
     else if (weatherinfo.weather[0].main === "Rain") {
-        weatherCondition.innerHTML = weatherinfo.weather[0].main
         weatherImg.setAttribute("src", "img/rain.png")
     }
     else if (weatherinfo.weather[0].main === "Drizzle") {
-        weatherCondition.innerHTML = weatherinfo.weather[0].main
         weatherImg.setAttribute("src", "img/drizzle.png")
     }
     else if (weatherinfo.weather[0].main === "Snow") {
-        weatherCondition.innerHTML = weatherinfo.weather[0].main
         weatherImg.setAttribute("src", "img/snow.png")
     }
     else if (weatherinfo.weather[0].main === "Mist") {
-        weatherCondition.innerHTML = weatherinfo.weather[0].main
         weatherImg.setAttribute("src", "img/mist.png")
     }
 }
