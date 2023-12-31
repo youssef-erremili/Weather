@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to bottom, #7494C5, #EBC4BF);
+    overflow-x: hidden;
+}
+
+::placeholder {
+    font-weight: 500;
+    color: #020202b4;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: capitalize;
+}
+
+.container {
+    width: 60vw;
+    min-height: 86vh;
+    border-radius: 5px;
+    position: relative;
+    z-index: 2;
+    /* overflow: hidden; */
+    color: #000;
+    padding-top: 1.3rem;
+}
+
+.container::after {
+    content: "";
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    min-height: 100%;
+    z-index: 1;
+    background-image: url(img/clearBackground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: blur(5.5px);
+}
+
+.logo {
+    width: 3.3rem;
+    overflow: hidden;
+    margin: 4.5px 16px 0 0;
+}
+
+.logo img {
+    width: 100%;
+    border-radius: 7px;
+}
+
+.weatherContainer {
+    position: absolute;
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+}
+
+.searchBar {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin: 1rem auto 0 auto;
+    min-height: 10vh;
+}
+
+.searchBar input[type=text] {
+    padding: 10px 14px;
+    border-radius: 7px;
+    outline: none;
+    border: none;
+    font-size: 17px;
+    background-color: #fff;
+    width: 25rem;
+    height: 7.2vh;
+}
+
+.searchBar .searchBtn {
+    font-size: 1.8rem;
+    background-color: #7494C5;
+    border-radius: 7px;
+    height: 7.2vh;
+    width: 3.8rem;
+    color: #fff;
+    margin-left: 16px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.weatherDetailes {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    color: #fff;
+    padding: 0 8rem 0 5rem;
+    margin-top: 2rem;
+}
+
+.weatherDetailes .title h1 {
+    font-size: 3rem;
+    text-transform: capitalize;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.weatherDetailes .title p {
+    font-size: 17px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.tempContainer {
+    position: relative;
+    width: fit-content;
+
+}
+
+.weatherTemp h1 {
+    font-size: 10rem;
+    font-weight: 200;
+    line-height: 0.8;
+    margin-right: 10px;
+}
+
+.tempContainer span {
+    font-size: 3rem;
+    position: absolute;
+    top: -5px;
+    right: -45px;
+}
+
+.weatherDesc {
+    text-align: center;
+}
+
+.weatherDesc span {
+    font-weight: 400;
+    font-size: 17px;
+    text-transform: capitalize;
+    font-family: 'Poppins', sans-serif;
+    /* color: #000; */
+}
+
+.weatherImg {
+    width: 10rem;
+}
+
+.weatherImg img {
+    width: 100%;
+}
+
+.weatherImg h3 {
+    text-align: center;
+    font-size: 2.3rem;
+    font-weight: 500;
+    margin: 0;
+    text-transform: capitalize;
+}
+
+.furtherDetailes {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.furtherDetailes .wind,
+.furtherDetailes .humidity {
+    display: flex;
+    text-transform: capitalize;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.furtherDetailes .wind img,
+.furtherDetailes .humidity img {
+    width: 50px;
+    margin: 0 10px;
+}
+
+.footer {
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+    font-family: "Montserrat", sans-serif;
+    padding-top: 40px;
+}
+
+.footer a {
+    color: #7494C5;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+#learn {
+    background-color: #7494C5;
+    border-radius: 3px;
+    padding: 2px 3px;
+    color: #fff;
+    text-decoration: underline;
+    font-weight: 400;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.toogle {
+    min-height: 90vh;
+    width: 82vw;
+    position: absolute;
+    background-color: #ffffff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    display: none;
+    z-index: 10;
+}
+
+.remove {
+    font-size: 2.5rem;
+    float: right;
+    margin: 10px;
+    color: #000;
+    cursor: pointer;
+}
+
+.hideDoc {
+    display: block;
+}
+
+.DocTemplate {
+    padding: 10px 20px;
+    font-size: 15px;
+}
+
+.DocTemplate ul {
+    list-style-type: circle;
+    list-style-position: inside;
+    margin: 10px 0;
+}
+
+.DocTemplate .box h3 {
+    font-size: 17px;
+    background-color: #7494C5;
+    margin: 13px 0 2px 0;
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 3px;
+}
+
+.DocTemplate .box p,
+.DocTemplate .box ul li {
+    font-size: 15px;
+    line-height: 1.2;
+    font-weight: 500;
+    color: #2b2b2b;
+}

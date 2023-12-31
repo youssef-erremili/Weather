@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+    <link rel="shortcut icon" href="img/logoIcon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="weatherContainer">
+            <div class="searchBar">
+                <div class="logo">
+                    <img src="img/logoWebsite.png" alt="logo of the website">
+                </div>
+                <input type="text" name="search" autocomplete="off" placeholder="location..." autofocus id="search">
+                <button type="button" class="searchBtn" id="searchBtn">
+                    <ion-icon name="search-outline"></ion-icon>
+                </button>
+            </div>
+            <div class="weatherDetailes">
+                <div class="title">
+                    <h1 id="cityName">--</h1>
+                    <h1 id="countryName">--</h1>
+                    <p id="weatherDate"></p>
+                    <div class="weatherImg">
+                        <img src="img/clear.png" id="weatherImg" alt="weather Condition">
+                        <h3 id="weatherCondition">---</h3>
+                        <div class="weatherDesc">
+                            <span id="weatherDescription">--</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="weatherTemp">
+                    <div class="tempContainer">
+                        <h1 id="cityTemp">--</h1>
+                        <span>°C</span>
+                    </div>
+                    <div class="furtherDetailes">
+                        <div class="wind">
+                            <img src="img/wind.png" alt="wind image">
+                            <section>
+                                <span id="cityWind">--</span>
+                                <span>km/h</span>
+                                <p>wind speed</p>
+                            </section>
+                        </div>
+                        <div class="humidity">
+                            <img src="img/humidity.png" alt="humidity image">
+                            <section>
+                                <span id="cityHumidity">--</span>
+                                <span>%</span>
+                                <p>humidity</p>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <p>This project, designed and coded by <a href="https://www.instagram.com/youssef.erremili.990?igsh=MTYxMmRkeG9sbHcydg==">YOUSSEF ERREMILI</a><span id="learn">learn more</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="toogle">
+        <div class="remove">
+            <ion-icon name="close-outline"></ion-icon>
+        </div>
+        <div class="DocTemplate">
+            <h1>Weather Website Application Documentation</h1>
+            <div class="box">
+                <h3>Overview</h3>
+                <p>The Weather Website Application is an interactive web platform that provides real-time weather
+                    information to users. This application harnesses HTML5, CSS3, and JavaScript technologies to create
+                    a user-friendly interface, and it connects to the OpenWeatherMap API to fetch accurate and current
+                    weather data.</p>
+            </div>
+            <div class="box">
+                <h3>Features</h3>
+                <ul>
+                    <li><strong>Search Bar:</strong> Allows users to search for weather information by entering a city
+                        name.</li>
+                    <li><strong>City and Country Display:</strong>Displays the name of the city and the country
+                        corresponding to the user's search query or selected location.</li>
+                    <li><strong>Weather Conditions:</strong> Shows weather conditions such as sunny, cloudy, rain, etc.,
+                        accompanied by icons for visual representation.</li>
+                    <li><strong>Wind Speed:</strong> Indicates the current wind speed in the selected location.</li>
+                    <li><strong>Humidity:</strong> Displays the percentage of humidity in the air.</li>
+                    <li><strong>Temperature:</strong> Shows the current temperature in either Celsius or Fahrenheit.
+                    </li>
+                </ul>
+            </div>
+            <div class="box">
+                <h3>Usage</h3>
+                <ul>
+                    <li><strong>Search for a Location:</strong> Type a city name into the search bar and press enter or
+                        click the search icon.</li>
+                    <li><strong>Review Weather Data:</strong> View the weather details that appear, including the
+                        temperature, humidity, wind speed, and general weather conditions for the selected city.</li>
+                </ul>
+            </div>
+            <div class="box">
+                <h3>API Reference</h3>
+                <p>This application uses the OpenWeatherMap API. Documentation for the API can be found at
+                    https://openweathermap.org/api.</p>
+            </div>
+            <div class="box">
+                <h3>API Configuration</h3>
+                <ul>
+                    <li>Use JavaScript's <a href="">fetch</a> method to retrieve weather data.</li>
+                    <li>The API returns data in JSON format, which is then displayed to the user.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>
