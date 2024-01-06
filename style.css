@@ -35,8 +35,6 @@ body {
     border-radius: 5px;
     position: relative;
     z-index: 2;
-    /* overflow: hidden; */
-    color: #000;
     padding-top: 1.3rem;
 }
 
@@ -48,7 +46,7 @@ body {
     width: 100%;
     min-height: 100%;
     z-index: 1;
-    background-image: url(img/clearBackground.jpg);
+    background-image: url(img/clearBackground.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -90,6 +88,10 @@ body {
     background-color: #fff;
     width: 25rem;
     height: 7.2vh;
+    background-image: url(img/location-outline.svg);
+    background-repeat: no-repeat;
+    background-size: 28px;
+    background-position: 96% center;
 }
 
 .searchBar .searchBtn {
@@ -136,11 +138,16 @@ body {
 
 }
 
-.weatherTemp h1 {
+.weatherTemp h1,
+.sectoonTwo h1.cityTemp {
     font-size: 10rem;
     font-weight: 200;
     line-height: 0.8;
     margin-right: 10px;
+}
+
+#showafter {
+    display: none;
 }
 
 .tempContainer span {
@@ -155,11 +162,10 @@ body {
 }
 
 .weatherDesc span {
-    font-weight: 400;
-    font-size: 17px;
+    font-weight: 300;
+    font-size: 18px;
     text-transform: capitalize;
     font-family: 'Poppins', sans-serif;
-    /* color: #000; */
 }
 
 .weatherImg {
@@ -190,6 +196,7 @@ body {
     text-transform: capitalize;
     margin-top: 20px;
     font-size: 18px;
+    text-align: left;
 }
 
 .furtherDetailes .wind img,
@@ -199,22 +206,22 @@ body {
 }
 
 .footer {
-    text-align: center;
     color: #fff;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 300;
-    font-family: "Montserrat", sans-serif;
-    padding-top: 40px;
-    position: fixed;
-    bottom: 6%;
+    font-family: "Poppins", sans-serif;
+    position: absolute;
+    bottom: 9%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: max-content;
 }
 
 .footer a {
     color: #7494C5;
     font-weight: 600;
     text-decoration: none;
+    text-wrap: balance;
 }
 
 #learn {
@@ -279,4 +286,163 @@ body {
     line-height: 1.2;
     font-weight: 500;
     color: #2b2b2b;
+}
+
+/* Now we make some magic actions here resposive section */
+@media only screen and (max-width: 1240px) {
+    .container {
+        width: 70vw;
+    }
+}
+
+@media only screen and (max-width: 1140px) {
+    .container {
+        width: 76vw;
+    }
+}
+
+@media only screen and (max-width: 1040px) {
+    .container {
+        width: 82vw;
+    }
+}
+
+@media only screen and (max-width: 972px) {
+    .container {
+        width: 86vw;
+    }
+}
+
+@media only screen and (max-width: 935px) {
+    .container {
+        width: 88vw;
+    }
+}
+
+@media only screen and (max-width: 895px) {
+    .container {
+        width: 92vw;
+    }
+}
+
+@media only screen and (max-width: 852px) {
+    .weatherDetailes {
+        align-items: center;
+        flex-direction: column;
+        padding: unset;
+        margin-top: 0.6rem;
+        text-align: center;
+    }
+
+    :is(#cityName, #countryName) {
+        font-size: 2.3rem;
+    }
+
+    .weatherImg {
+        margin: auto;
+    }
+
+    #hideAfter {
+        display: none;
+    }
+
+    #showafter {
+        display: block;
+    }
+
+    .sectoonTwo {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sectoonTwo h1.cityTemp {
+        font-size: 8rem;
+    }
+
+    .furtherDetailes {
+        flex-direction: row;
+        margin-top: 0;
+    }
+}
+
+@media only screen and (max-width: 670px) {
+    .searchBar input[type=text] {
+        width: 62vw;
+    }
+
+    .logo {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 595px) {
+    .footer {
+        width: 90%;
+        text-align: center;
+        text-wrap: balance;
+        bottom: 3%;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    .sectoonTwo {
+        flex-direction: column-reverse;
+    }
+
+    .container {
+        min-height: 100vh;
+        width: 100vw;
+
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    .searchBar {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .searchBar .searchBtn {
+        margin: 10px 0 0 0;
+        width: 30vw;
+    }
+
+    .searchBar input[type=text] {
+        width: 82vw;
+    }
+
+    .tempContainer span {
+        font-size: 2.1rem;
+        top: -5px;
+        right: -27px;
+    }
+
+    .sectoonTwo h1.cityTemp {
+        font-size: 6rem;
+    }
+
+    .weatherImg {
+        width: 8rem;
+    }
+
+    .furtherDetailes {
+        flex-direction: column;
+    }
+
+    .footer {
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 345px) {
+    .sectoonTwo h1.cityTemp {
+        font-size: 5.2rem;
+    }
+
+    :is(#cityName, #countryName) {
+        font-size: 2.1rem;
+    }
 }

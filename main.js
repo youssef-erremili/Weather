@@ -1,6 +1,6 @@
 // declare all variable and html tags that I need 
 const cityName = document.getElementById("cityName")
-const cityTemp = document.getElementById("cityTemp")
+const cityTemp = document.querySelectorAll(".cityTemp")
 const cityWind = document.getElementById("cityWind")
 const cityHumidity = document.getElementById("cityHumidity")
 const searchField = document.getElementById("search")
@@ -60,9 +60,12 @@ searchBtn.addEventListener("click", function (e) {
 
 // and this funtion is about to set every data in its place in HTML 
 function weatherFunction(weatherinfo) {
-    cityName.innerHTML = weatherinfo.name
-    countryName.innerHTML = `, ${weatherinfo.sys.country}`
-    cityTemp.innerHTML = Math.round(weatherinfo.main.temp)
+    cityName.innerHTML = `${weatherinfo.name}, `
+    countryName.innerHTML = weatherinfo.sys.country
+    // cityTemp.innerHTML = Math.round(weatherinfo.main.temp)
+    cityTemp.forEach((temp) => {
+        temp.innerHTML = Math.round(weatherinfo.main.temp)
+    })
     cityWind.innerHTML = weatherinfo.wind.speed
     cityHumidity.innerHTML = weatherinfo.main.humidity
     weatherCondition.innerHTML = weatherinfo.weather[0].main
