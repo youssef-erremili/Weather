@@ -62,7 +62,6 @@ searchBtn.addEventListener("click", function (e) {
 function weatherFunction(weatherinfo) {
     cityName.innerHTML = `${weatherinfo.name}, `
     countryName.innerHTML = weatherinfo.sys.country
-    // cityTemp.innerHTML = Math.round(weatherinfo.main.temp)
     cityTemp.forEach((temp) => {
         temp.innerHTML = Math.round(weatherinfo.main.temp)
     })
