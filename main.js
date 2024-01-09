@@ -70,7 +70,6 @@ function weatherFunction(weatherinfo) {
     weatherCondition.innerHTML = weatherinfo.weather[0].main
     weatherDescription.innerHTML = weatherinfo.weather[0].description
     if (weatherinfo.weather[0].main === "Clear") {
-        weatherCondition.innerHTML = weatherinfo.weather[0].main
         weatherImg.setAttribute("src", "img/clear.png")
     }
     else if (weatherinfo.weather[0].main === "Clouds") {
