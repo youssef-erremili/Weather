@@ -280,6 +280,7 @@ body {
     display: inline-block;
     padding: 2px 10px;
     border-radius: 3px;
+    color: #ffffff;
 }
 
 .DocTemplate .box p,
