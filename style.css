@@ -118,7 +118,7 @@ body {
     margin-top: 2rem;
 }
 
-.weatherDetailes .title h1 {
+.weatherDetailes .title h2 {
     font-size: 3rem;
     text-transform: capitalize;
     font-weight: 500;
@@ -137,8 +137,8 @@ body {
 
 }
 
-.weatherTemp h1,
-.sectoonTwo h1.cityTemp {
+.weatherTemp h2,
+.sectoonTwo h2.cityTemp {
     font-size: 10rem;
     font-weight: 200;
     line-height: 0.8;
@@ -359,7 +359,7 @@ body {
         justify-content: center;
     }
 
-    .sectoonTwo h1.cityTemp {
+    .sectoonTwo h2.cityTemp {
         font-size: 8rem;
     }
 
@@ -423,7 +423,7 @@ body {
         right: -27px;
     }
 
-    .sectoonTwo h1.cityTemp {
+    .sectoonTwo h2.cityTemp {
         font-size: 6rem;
     }
 
@@ -437,7 +437,7 @@ body {
 }
 
 @media only screen and (max-width: 345px) {
-    .sectoonTwo h1.cityTemp {
+    .sectoonTwo h2.cityTemp {
         font-size: 5.2rem;
     }
 
